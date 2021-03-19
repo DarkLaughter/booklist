@@ -70,10 +70,26 @@
 //event bubbling
 // events bubbling through the dom tree
 const list = document.querySelector('#book-list ul')
-console.log(list)
+
 list.addEventListener('click', (e) => {
     if (e.target.className === 'delete') {
         const li = e.target.parentElement
         list.removeChild(li)
     }
+})
+
+// forms 
+// instead of using a querySelector we can use document.forms to query the dom tree for forms such as
+// document.forms -> html collection
+// document.forms[0] -> form tag with id of search books 
+// document.forms['add-book'] -> form with id of add-book
+
+
+//add book
+const addBook = document.forms['add-book']
+addBook.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const value = addBook.querySelector('input[type="text"]').value
+
+    
 })
