@@ -61,8 +61,19 @@
 // })
 
 // prevent default using new link in page banner
-const link = document.querySelector('#page-banner a')
-link.addEventListener('click', (e) => {
-    e.preventDefault()
-    console.log(e.target.textContent)
+// const link = document.querySelector('#page-banner a')
+// link.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     console.log(e.target.textContent)
+// })
+
+//event bubbling
+// events bubbling through the dom tree
+const list = document.querySelector('#book-list ul')
+console.log(list)
+list.addEventListener('click', (e) => {
+    if (e.target.className === 'delete') {
+        const li = e.target.parentElement
+        list.removeChild(li)
+    }
 })
