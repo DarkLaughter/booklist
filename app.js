@@ -91,5 +91,24 @@ addBook.addEventListener('submit', (e) => {
     e.preventDefault()
     const value = addBook.querySelector('input[type="text"]').value
 
-    
+    // creating elements for adding book
+
+    const li = document.createElement('li')
+    const name = document.createElement('span')
+    const deleteBtn = document.createElement('span')
+
+    // add content to new elements
+    deleteBtn.textContent = 'delete'
+    name.textContent = value
+
+    //adding classes
+    name.classList.add('name')
+    deleteBtn.classList.add('delete')
+
+    // appending elements to eachother and dom 
+    //order does matter
+    li.appendChild(name)
+    li.appendChild(deleteBtn)
+    list.appendChild(li)
+
 })
