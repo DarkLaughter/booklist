@@ -47,15 +47,22 @@
 //     console.log(e.target)
 // })
 
-const btns = document.querySelectorAll('#book-list .delete')
+// const btns = document.querySelectorAll('#book-list .delete')
 
-btns.forEach((btn) => {
+// btns.forEach((btn) => {
 
-    btn.addEventListener('click', (e) => {
-        const li = e.target.parentElement
-        li.parentNode.removeChild(li)
+//     btn.addEventListener('click', (e) => {
+//         const li = e.target.parentElement
+//         li.parentNode.removeChild(li)
 
-    })
+//     })
 
 
+// })
+
+// prevent default using new link in page banner
+const link = document.querySelector('#page-banner a')
+link.addEventListener('click', (e) => {
+    e.preventDefault()
+    console.log(e.target.textContent)
 })
