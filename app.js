@@ -21,3 +21,19 @@ console.log(bannerClone)
 // just div with page-banner id
 const bannerClone2 = banner.cloneNode(false)
 console.log(bannerClone2)
+
+//dom traversal
+
+const booklst = document.querySelector('#book-list')
+// states parent node, mostly do the same thing
+console.log(booklst.parentNode)
+console.log(booklst.parentElement)
+// grabbing the parent of the parent
+console.log(booklst.parentElement.parentElement)
+
+//referencing children nodes, grabs all nodes 
+console.log(booklst.childNodes)
+
+// grab child node elements
+console.log(booklst.children)
+
